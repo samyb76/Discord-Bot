@@ -46,7 +46,7 @@ async def weather(ctx, city):
         await ctx.send("Ville introuvable")
         return
 
-    temp = data["main"]["temp"]
+    temp = int(data["main"]["temp"])
     desc = data["weather"][0]["description"]
 
     await ctx.send(f"{city} : {temp}°C, {desc}")
